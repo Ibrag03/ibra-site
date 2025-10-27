@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibrahim Ghonim — About</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600&family=Orbitron:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- Preload background asset -->
+    <link rel="preload" as="image" href="../assets/background.png" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/about.css" />
+
+    <style>
+      html, body {
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        background: #040214;
+      }
+      /* Skills icon grid (local to About page) */
+      .skills-grid { display: grid; grid-template-columns: repeat(3, minmax(100px, 1fr)); gap: 1.4rem; justify-items: center; padding: .4rem 0; }
+      .skill { display: grid; justify-items: center; align-items: start; gap: .35rem; text-align: center; }
+      .skill i { font-size: 44px; line-height: 1; filter: drop-shadow(0 8px 16px rgba(0,0,0,.35)); }
+      .skill span { font-size: .9rem; opacity: .92; }
+      @media (max-width: 900px) { .skills-grid { grid-template-columns: repeat(3, minmax(90px, 1fr)); } }
+      @media (max-width: 540px) { .skills-grid { grid-template-columns: repeat(3, minmax(80px, 1fr)); } .skill i { font-size: 38px; } .skill span { font-size: .85rem; } }
+    </style>
+
+  </head>
+  <body>
+    <main class="page-wrap" id="about">
+      <header class="header" role="banner">
+        <a class="logo no-underline" href="../index.html" style="text-decoration: none !important;">
+          <span class="logo-accent">IBRA</span>DESIGN
+        </a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+        <nav class="nav nav--visible" id="primary-nav" role="navigation">
+          <a class="nav-link" href="../index.html">Home</a>
+          <a class="nav-link" href="./projects.html">Projects</a>
+          <a class="nav-link" href="./service.html">Services</a>
+          <a class="nav-link" href="./about.html" aria-current="page">About</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </nav>
+        <a class="button button-outline button-wallet" href="mailto:ibrahim@ghonim.com">Contact Me</a>
+      </header>
+
+      <!-- About Section -->
+      <section class="hero" aria-labelledby="about-title">
+        <div class="hero-content">
+          <p class="eyebrow">ABOUT ME</p>
+          <h1 class="hero-title" id="about-title">ABOUT</h1>
+          <p class="hero-copy">
+            I’m <strong>Ibrahim Ghonim</strong>, a passionate <strong>Full‑Stack Developer</strong> dedicated to crafting clean, efficient, and scalable web solutions. I blend creativity and logic to design digital experiences that perform beautifully on every device.
+          </p>
+          <p class="hero-copy">
+            With years of experience building responsive websites, dashboards, and web apps, I focus on <strong>performance, maintainability</strong>, and <strong>modern design principles</strong>. My goal is to turn complex ideas into simple, elegant, and powerful interfaces.
+          </p>
+        </div>
+
+        <div class="hero-visual">
+        </div>
+      </section>
+
+      <!-- Skills Section (icons) -->
+      <section class="hero-footer" aria-label="Skills" style="margin-top:2rem; gap: clamp(1rem, 3vw, 2rem); align-items: stretch;">
+        <article class="glass-card" style="flex:1 1 320px;">
+          <header class="glass-card-label">Frontend</header>
+          <div class="glass-card-body">
+            <ul class="skills-grid" aria-label="Frontend stack">
+              <li class="skill" title="HTML5"><i class="devicon-html5-plain colored"></i><span>HTML5</span></li>
+              <li class="skill" title="CSS3"><i class="devicon-css3-plain colored"></i><span>CSS3</span></li>
+              <li class="skill" title="JavaScript"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></li>
+              <li class="skill" title="React"><i class="devicon-react-original colored"></i><span>React</span></li>
+              <li class="skill" title="Next.js"><i class="devicon-nextjs-original"></i><span>Next.js</span></li>
+              <li class="skill" title="Tailwind CSS"><i class="devicon-tailwindcss-plain colored"></i><span>Tailwind</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="glass-card" style="flex:1 1 320px;">
+          <header class="glass-card-label">Backend</header>
+          <div class="glass-card-body">
+            <ul class="skills-grid" aria-label="Backend stack">
+              <li class="skill" title="Node.js"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></li>
+              <li class="skill" title="Express"><i class="devicon-express-original"></i><span>Express</span></li>
+              <li class="skill" title="NestJS"><i class="devicon-nestjs-plain colored"></i><span>NestJS</span></li>
+              <li class="skill" title="PostgreSQL"><i class="devicon-postgresql-plain colored"></i><span>Postgres</span></li>
+              <li class="skill" title="MongoDB"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></li>
+              <li class="skill" title="Prisma"><i class="devicon-prisma-original"></i><span>Prisma</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="glass-card" style="flex:1 1 320px;">
+          <header class="glass-card-label">Tools & Design</header>
+          <div class="glass-card-body">
+            <ul class="skills-grid" aria-label="Tools and Design">
+              <li class="skill" title="Git"><i class="devicon-git-plain colored"></i><span>Git</span></li>
+              <li class="skill" title="GitHub"><i class="devicon-github-original"></i><span>GitHub</span></li>
+              <li class="skill" title="Docker"><i class="devicon-docker-plain colored"></i><span>Docker</span></li>
+              <li class="skill" title="Figma"><i class="devicon-figma-plain colored"></i><span>Figma</span></li>
+              <li class="skill" title="Photoshop"><i class="devicon-photoshop-plain colored"></i><span>Photoshop</span></li>
+              <li class="skill" title="VS Code"><i class="devicon-vscode-plain colored"></i><span>VSCode</span></li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="hero-footer" style="margin-top:3rem; justify-content:center; text-align:center;">
+        <p class="hero-copy" style="max-width:720px; margin:auto; opacity:.9;">
+          Always excited to collaborate on creative and technical challenges. Let’s build something amazing together.
+        </p>
+        <a class="button button-primary" href="mailto:ibrahim@ghonim.com" style="margin-top:1.5rem;">Let's connect</a>
+      </section>
+    </main>
+
+    <script src="../script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        console.log('✅ about.css loaded successfully');
+      });
+    </script>
+  </body>
+</html>

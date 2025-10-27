@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibrahim Ghonim — Services</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Inter:wght@400;500;600&family=Orbitron:wght@400;600&display=swap" rel="stylesheet" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/service.css" />
+
+    <!-- Preload background asset for faster paint -->
+    <link rel="preload" as="image" href="../assets/background.png" />
+  </head>
+  <body>
+    <main class="page-wrap" id="services">
+      <header class="header" role="banner">
+        <a class="logo" href="../index.html" style="text-decoration: none;">
+          <span class="logo-accent">IBRA</span>DESIGN
+        </a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Menu">
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+        <nav class="nav nav--visible" id="primary-nav" role="navigation">
+          <a class="nav-link" href="../index.html">Home</a>
+          <a class="nav-link" href="./projects.html">Projects</a>
+          <a class="nav-link" href="./service.html" aria-current="page">Services</a>
+          <a class="nav-link" href="./about.html">About</a>
+          <a class="nav-link" href="./contact.html">Contact</a>
+        </nav>
+        <a class="button button-outline button-wallet" href="mailto:ibrahim@ghonim.com">Contact Me</a>
+      </header>
+
+      <!-- Hero / Page intro -->
+      <section class="hero" aria-labelledby="services-title">
+        <div class="hero-content">
+          <p class="eyebrow">SERVICES</p>
+          <h1 class="hero-title" id="services-title">SERVICES</h1>
+          <p class="hero-copy">I’m a Full‑Stack Developer specialized in both <strong>web</strong> and <strong>mobile apps</strong>. I build seamless digital experiences using JavaScript, TypeScript, React, Next.js, Node.js, Flutter, Swift, and more — merging design and performance into clean, scalable code.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="mailto:ibrahim@ghonim.com">Get a quote</a>
+            <a class="button button-outline" href="./projects.html">View projects</a>
+          </div>
+        </div>
+
+        <!-- Visual side with service badges (reuses existing glass styles) -->
+        <div class="hero-visual">
+        </div>
+      </section>
+
+      <!-- Services grid -->
+      <section class="hero-footer" aria-label="Service list" style="margin-top:2.2rem; gap: clamp(1rem, 3vw, 2rem); align-items: stretch;">
+        <article class="glass-card" style="flex:1 1 320px;">
+          <header class="glass-card-label">Custom Websites</header>
+          <div class="glass-card-body">
+            <p class="hero-copy" style="max-width:none; font-size:1rem;">Pixel‑perfect, responsive websites and landing pages with CMS or headless content. SEO‑ready, fast, and easy to maintain.</p>
+            <ul style="margin:0; padding-left:1.1rem; line-height:1.8; opacity:.92;">
+              <li>Responsive UI &amp; animations</li>
+              <li>Next.js / Vite / Vanilla</li>
+              <li>SEO &amp; performance best‑practices</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="glass-card" style="flex:1 1 320px;">
+          <header class="glass-card-label">Full‑Stack Apps</header>
+          <div class="glass-card-body">
+            <p class="hero-copy" style="max-width:none; font-size:1rem;">Dashboards, APIs, auth, and databases. Clean architecture with scalability in mind.</p>
+            <ul style="margin:0; padding-left:1.1rem; line-height:1.8; opacity:.92;">
+              <li>Node / Express / Nest / Next API</li>
+              <li>Postgres / Prisma / Mongo</li>
+              <li>Auth, roles &amp; payments</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="glass-card" style="flex:1 1 320px;">
+          <header class="glass-card-label">Maintenance &amp; Optimizations</header>
+          <div class="glass-card-body">
+            <p class="hero-copy" style="max-width:none; font-size:1rem;">Keep your product healthy: faster load times, better Lighthouse scores, and quick fixes.</p>
+            <ul style="margin:0; padding-left:1.1rem; line-height:1.8; opacity:.92;">
+              <li>Performance tuning</li>
+              <li>Accessibility &amp; UX reviews</li>
+              <li>Bug fixes &amp; upgrades</li>
+            </ul>
+          </div>
+        </article>
+      </section>
+
+      <!-- CTA bottom -->
+      <section class="hero-footer" style="margin-top:2.4rem; justify-content:space-between; align-items:center;">
+        <div class="glass-card" style="flex:1 1 360px;">
+          <header class="glass-card-label">Availability</header>
+          <div class="glass-card-body" style="display:flex; align-items:center; gap:1rem;">
+            <div class="token-icon" aria-hidden="true">◇</div>
+            <div>
+              <div class="token-title">Status</div>
+              <div class="token-value"><strong>Open for freelance &amp; contracts</strong><br/>Response time: <strong>&lt; 24h</strong></div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <a class="button button-outline" href="mailto:ibrahim@ghonim.com">Contact Me</a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Optional: if you want menu toggle & smooth scroll like home -->
+    <script src="../script.js"></script>
+  </body>
+</html>

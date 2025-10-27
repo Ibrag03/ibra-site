@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ibrahim Ghonim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="assets/background.png" />
+    <style>
+      /* Fallback min styles (in case external CSS fails) */
+      html, body { margin:0; padding:0; background:#040214; color:#fff; }
+      .page-wrap { min-height:100vh; }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="scan-stripes" aria-hidden="true">
+      <div class="stripe stripe--one"></div>
+      <div class="stripe stripe--two"></div>
+    </div>
+
+    <div class="page-wrap">
+      <header class="header">
+        <div class="logo">
+          <span class="logo-accent">IBRA</span>DESIGN
+        </div>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+          <span class="menu-bar"></span>
+        </button>
+        <nav class="nav" id="primary-nav">
+          <a class="nav-link" href="index.html" aria-current="page">Home</a>
+          <a class="nav-link" href="pages/projects.html">Projects</a>
+          <a class="nav-link" href="pages/service.html">Services</a>
+          <a class="nav-link" href="pages/about.html">About</a>
+          <a class="nav-link" href="pages/contact.html">Contact</a>
+        </nav>
+        <a class="button button-outline button-wallet" href="mailto:ibrahim@ghonim.com">Contact Me</a>
+      </header>
+
+      <main class="hero" id="home" role="main">
+        <div class="hero-content">
+          <span class="eyebrow">FULL STACK DEVELOPER</span>
+          <h1 class="hero-title">IBRA</h1>
+          <p class="hero-copy">
+            Passionate full-stack developer crafting modern web applications with clean design, performance, and interactivity. Turning ideas into digital experiences that inspire.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-outline" href="pages/projects.html">View Projects</a>
+            <a class="button button-ghost" href="mailto:ibrahim@ghonim.com">Contact Me <span aria-hidden="true">→</span></a>
+          </div>
+
+          <div class="hero-footer">
+            <article class="bid-card glass-card">
+              <header class="glass-card-label">Availability</header>
+              <div class="glass-card-body">
+                <div class="token-info">
+                  <div class="token-icon" aria-hidden="true">◇</div>
+                  <div>
+                    <div class="token-title">Status</div>
+                    <div class="token-value">
+                      <strong>Contact me for Info</strong><br />
+                      Response time: <strong>&lt; 24h</strong>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="orb"></div>
+          <div class="hero-card hero-card--auth">100% Custom Code</div>
+          <div class="hero-card hero-card--creators">5+ Years Experience</div>
+          <div class="hero-card hero-card--stored">Full-Stack Expertise</div>
+          <div class="character" role="presentation" aria-hidden="true"></div>
+          <div class="countdown countdown--overlay" aria-label="Current Time (Europe/Rome)">
+            <div class="countdown-item">
+              <div class="value value--stack" id="cd-day">
+                <span id="cd-day-wd">—</span>
+                <span id="cd-day-date">—</span>
+              </div>
+              <div class="label">Day</div>
+            </div>
+            <div class="countdown-item">
+              <div class="value" id="cd-hour">—</div>
+              <div class="label">Hours</div>
+            </div>
+            <div class="countdown-item">
+              <div class="value" id="cd-minute">—</div>
+              <div class="label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+              <div class="value" id="cd-second">—</div>
+              <div class="label">Seconds</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+    <script>
+      const tz = 'Europe/Rome';
+
+      const fmtWd = new Intl.DateTimeFormat('en-GB', { weekday: 'short', timeZone: tz });
+      const fmtDate = new Intl.DateTimeFormat('en-GB', { day: '2-digit', month: '2-digit', year: '2-digit', timeZone: tz });
+      const fmtTime = new Intl.DateTimeFormat('en-GB', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false, timeZone: tz });
+
+      const updateClock = () => {
+        const now = new Date();
+        document.getElementById('cd-day-wd').textContent = fmtWd.format(now).toUpperCase();
+        document.getElementById('cd-day-date').textContent = fmtDate.format(now);
+
+        const [h, m, s] = fmtTime.format(now).split(':');
+        document.getElementById('cd-hour').textContent = h;
+        document.getElementById('cd-minute').textContent = m;
+        document.getElementById('cd-second').textContent = s;
+      };
+
+      updateClock();
+      setInterval(updateClock, 1000);
+    </script>
+  </body>
+</html>
