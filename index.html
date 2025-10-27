@@ -109,14 +109,13 @@
 
     <script src="script.js"></script>
 
-    <!-- ✅ MONETAG Ad Script (controlled loader) -->
+    <!-- ✅ MONETAG Ad Script (delay 10s, 1x per session, no mobile) -->
     <script>
       (function () {
         var ZONE_URL = 'https://fpyf8.com/88/tag.min.js';
         var ZONE_ID  = '180946';
-        var SHOW_ON_MOBILE = false;
-        var USE_EXIT_INTENT = true;
-        var LOAD_DELAY_MS = 8000;
+        var SHOW_ON_MOBILE = false;   // metti true per abilitarlo anche su mobile
+        var LOAD_DELAY_MS   = 10000;  // 10 secondi
         var SESSION_KEY = 'monetag_shown';
 
         function isMobile() {
@@ -134,24 +133,11 @@
           document.body.appendChild(s);
         }
 
-        function setupExitIntent() {
-          document.addEventListener('mouseleave', function (e) {
-            if (e.clientY < 10) loadMonetagOnce();
-          }, { passive: true });
-          window.addEventListener('blur', loadMonetagOnce, { passive: true });
-        }
-
-        function scheduleByDelay() {
-          setTimeout(loadMonetagOnce, LOAD_DELAY_MS);
-        }
-
         if (!SHOW_ON_MOBILE && isMobile()) return;
 
-        if (USE_EXIT_INTENT) {
-          setupExitIntent();
-        } else {
-          window.addEventListener('load', scheduleByDelay, { passive: true });
-        }
+        window.addEventListener('load', function () {
+          setTimeout(loadMonetagOnce, LOAD_DELAY_MS);
+        }, { passive: true });
       })();
     </script>
 
