@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="monetag" content="83fc291a645e2d2279363e9d2d4dc015">
+    <meta name="monetag-allow-popunder" content="false">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ibrahim Ghonim</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -109,13 +110,13 @@
 
     <script src="script.js"></script>
 
-    <!-- ✅ MONETAG Ad Script (delay 10s, 1x per session, no mobile) -->
+    <!-- ✅ MONETAG Ad Script (delay 5s, 1x per session, no mobile, non-adult content, no popunder) -->
     <script>
       (function () {
         var ZONE_URL = 'https://fpyf8.com/88/tag.min.js';
         var ZONE_ID  = '180946';
         var SHOW_ON_MOBILE = false;   // metti true per abilitarlo anche su mobile
-        var LOAD_DELAY_MS   = 10000;  // 10 secondi
+        var LOAD_DELAY_MS   = 5000;   // 5 secondi
         var SESSION_KEY = 'monetag_shown';
 
         function isMobile() {
@@ -130,6 +131,7 @@
           s.async = true;
           s.setAttribute('data-zone', ZONE_ID);
           s.setAttribute('data-cfasync', 'false');
+          s.setAttribute('data-categories', 'nonadult,family');
           document.body.appendChild(s);
         }
 
