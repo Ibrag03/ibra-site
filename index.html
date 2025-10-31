@@ -110,39 +110,6 @@
 
     <script src="script.js"></script>
 
-    <!-- ✅ MONETAG Ad Script (delay 5s, 1x per session, no mobile, non-adult content, no popunder) -->
-    <script>
-      (function () {
-        var ZONE_URL = 'https://fpyf8.com/88/tag.min.js';
-        var ZONE_ID  = '180946';
-        var SHOW_ON_MOBILE = false;   // metti true per abilitarlo anche su mobile
-        var LOAD_DELAY_MS   = 5000;   // 5 secondi
-        var SESSION_KEY = 'monetag_shown';
-
-        function isMobile() {
-          return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        }
-
-        function loadMonetagOnce() {
-          if (sessionStorage.getItem(SESSION_KEY)) return;
-          sessionStorage.setItem(SESSION_KEY, '1');
-          var s = document.createElement('script');
-          s.src = ZONE_URL;
-          s.async = true;
-          s.setAttribute('data-zone', ZONE_ID);
-          s.setAttribute('data-cfasync', 'false');
-          s.setAttribute('data-categories', 'nonadult,family');
-          document.body.appendChild(s);
-        }
-
-        if (!SHOW_ON_MOBILE && isMobile()) return;
-
-        window.addEventListener('load', function () {
-          setTimeout(loadMonetagOnce, LOAD_DELAY_MS);
-        }, { passive: true });
-      })();
-    </script>
-
     <script>
       const tz = 'Europe/Rome';
       const fmtWd = new Intl.DateTimeFormat('en-GB', { weekday: 'short', timeZone: tz });
